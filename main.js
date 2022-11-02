@@ -31,7 +31,7 @@ function calcResult(timeDiff) {
   console.log(daysDiff);
   if (daysDiff >= 1) {
     result.innerHTML = `Total: ${hoursDiff > 12 ? daysDiff + 1 : daysDiff}${
-      hoursDiff > 12 ? " diárias e meia" : " diária(s)"
+      hoursDiff <= 12 ? " diárias e meia" : " diária(s)"
     } `;
   }
 }
