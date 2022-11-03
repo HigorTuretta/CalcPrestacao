@@ -47,3 +47,12 @@
 .inpt:focus{
     outline: none;
 }
+
+@media screen and (max-width: 600px) {
+    .dt-inputs-area{
+        width: 70vw;
+    }
+    .form-group:first-of-type{
+        margin-right: 0;
+    }
+}
