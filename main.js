@@ -13,6 +13,13 @@ const horaIda = document.getElementById("horaIda");
 const dataVolta = document.getElementById("dataVolta");
 const horaVolta = document.getElementById("horaVolta");
 
+window.onload = ()=>{
+  dataIda.value = '2022-01-01'
+  horaIda.value = '21:00'
+  dataVolta.value = '2022-01-02'
+  horaVolta.value = '08:00'
+}
+
 btn.addEventListener("click", () => {
   const hora1 = getFormattedTime(new Date(`2022-01-01 ${horaIda.value}`));
   const hora2 = getFormattedTime(new Date(`2022-01-01 ${horaVolta.value}`));
