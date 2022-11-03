@@ -3,32 +3,20 @@ import "./app/styles/header.css";
 import "./app/styles/inputs.css";
 import "./app/styles/buttons.css";
 
-import { getFormattedDate, getFormattedTime } from "./app/utils/formatDates.js";
-import datetimeDifference from "datetime-difference";
-import { calcResult } from "./app/utils/calcResult";
+import { getDates } from "./calcResult";
+import {getCurrentDate} from "./app/utils/formatDates"
 
 const btn = document.getElementById("calc");
-const dataIda = document.getElementById("dataIda");
-const horaIda = document.getElementById("horaIda");
-const dataVolta = document.getElementById("dataVolta");
-const horaVolta = document.getElementById("horaVolta");
+let dataIda = document.getElementById("dataIda");
+let horaIda = document.getElementById("horaIda");
+let dataVolta = document.getElementById("dataVolta");
+let horaVolta = document.getElementById("horaVolta");
 
-window.onload = ()=>{
-  dataIda.value = '2022-01-01'
-  horaIda.value = '21:00'
-  dataVolta.value = '2022-01-02'
-  horaVolta.value = '08:00'
-}
+window.onload = () => {
+  dataIda.value = getCurrentDate();
+  horaIda.value = "21:00";
+  dataVolta.value = getCurrentDate();
+  horaVolta.value = "08:00";
 
-btn.addEventListener("click", () => {
-  const hora1 = getFormattedTime(new Date(`2022-01-01 ${horaIda.value}`));
-  const hora2 = getFormattedTime(new Date(`2022-01-01 ${horaVolta.value}`));
-
-  const date1 = getFormattedDate(new Date(dataIda.value));
-  const date2 = getFormattedDate(new Date(dataVolta.value));
-
-  const dataHoraIda = new Date(date1 + " " + hora1);
-  const dataHoraVolta = new Date(date2 + " " + hora2);
-
-  calcResult(datetimeDifference(dataHoraVolta, dataHoraIda));
-});
+  btn.addEventListener("click", getDates(event), false);
+};
