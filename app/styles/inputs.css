@@ -1,13 +1,14 @@
 .dt-inputs-area{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin-top: -70px;
+    margin-top: -90px;
     padding: 50px;
     border-radius: 50px;
-    background-color: #ededed;
-    box-shadow: #727272 30px 30px 60px;
+    background-color: rgba(237, 237, 237, 0.9);
+    box-shadow: #909090 30px 30px 60px;
 }
 
 .form-group{
@@ -15,12 +16,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    text-align: center;
+}
+
+.form-group:first-of-type{
+    margin-right: 20px;
 }
 .form-group label{
     font-size: 24px;
     margin-bottom: 10px;
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
     letter-spacing: 1px;
     color: #131313;
 }

@@ -2,7 +2,7 @@
 
 .btn-calc{
     padding: 5px 100px;
-    background-color: rgb(197, 255, 197);
+    background-color: rgb(114, 210, 114);
     border: none;
     margin-top: -20px;
     border-radius: 15px;
@@ -10,12 +10,13 @@
     font-size: 24px;
     letter-spacing: 1px;
     color: rgb(33, 33, 33);
+    z-index: 10;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-calc:hover{
     cursor: pointer;
     transform: scale(0.95);
-    background-color: rgb(114, 210, 114);
+    background-color: rgb(87, 180, 87);
     color: white;
 }
