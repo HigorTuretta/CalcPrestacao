@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header-area{
+    background-image: url('./airport.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+}
+
+.header-area h1{
+    color: rgb(236, 236, 236);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    text-shadow: 10px 10px 10px rgb(30, 30, 30);
+}

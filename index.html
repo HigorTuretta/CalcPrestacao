@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div>
-      <div class="dt-inputs-area">
-          <input type="date" name="dataIda" id="dataIda">
-          <input type="time" name="horaIda" id="horaIda">
-      </div>
-      <div class="dt-inputs-area">
-        <input type="date" name="dataVolta" id="dataVolta">
-        <input type="time" name="horaVolta" id="horaVolta">
-    </div>
-      <button id="teste">Teste</button>
-    </div>
 
-    <h1 id="result"></h1>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <section class="header-area">
+    <h1>Calculadora de Diárias</h1>
+  </section>
+    <div class="dt-inputs-area">
+      <div class="form-group">
+        <label>Data/Hora Saída</label>
+        <div class="input-group">
+          <input type="date" name="dataIda" id="dataIda" class="inpt">
+          <input type="time" name="horaIda" id="horaIda" class="inpt">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Data/Hora Retorno</label>
+        <div class="input-group">
+          <input type="date" name="dataVolta" id="dataVolta" class="inpt">
+          <input type="time" name="horaVolta" id="horaVolta" class="inpt">
+        </div>
+      </div>      
+    </div>
+    <button class="btn-calc" id="calc">Calcular</button>
+    
+
+  <h1 id="result"></h1>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>

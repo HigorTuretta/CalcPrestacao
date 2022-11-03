@@ -1,0 +1,43 @@
+.dt-inputs-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: -70px;
+    padding: 50px;
+    border-radius: 50px;
+    background-color: #ededed;
+    box-shadow: #727272 30px 30px 60px;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.form-group label{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    color: #131313;
+}
+
+.inpt{
+    padding: 10px;
+    border: none;
+    margin:  2px;
+    border-radius: 50px;
+    background: #ededed;
+    box-shadow: #ababab -10px -10px 60px;
+}
+
+.inpt:hover{
+    cursor: pointer;
+}
+
+.inpt:focus{
+    outline: none;
+}

@@ -1,13 +1,17 @@
 import "./style.css";
+import "./app/styles/header.css";
+import "./app/styles/inputs.css";
+import "./app/styles/buttons.css";
+
 import { getFormattedDate, getFormattedTime } from "./app/utils/formatDates.js";
 import datetimeDifference from "datetime-difference";
+import { calcResult } from "./app/utils/calcResult";
 
-const btn = document.getElementById("teste");
+const btn = document.getElementById("calc");
 const dataIda = document.getElementById("dataIda");
 const horaIda = document.getElementById("horaIda");
 const dataVolta = document.getElementById("dataVolta");
 const horaVolta = document.getElementById("horaVolta");
-const result = document.getElementById("result");
 
 btn.addEventListener("click", () => {
   const hora1 = getFormattedTime(new Date(`2022-01-01 ${horaIda.value}`));
@@ -18,20 +22,6 @@ btn.addEventListener("click", () => {
 
   const dataHoraIda = new Date(date1 + " " + hora1);
   const dataHoraVolta = new Date(date2 + " " + hora2);
-  console.log(date1, hora1, date2, hora2);
-  console.log(datetimeDifference(dataHoraVolta, dataHoraIda));
+
   calcResult(datetimeDifference(dataHoraVolta, dataHoraIda));
 });
-
-function calcResult(timeDiff) {
-  const hoursDiff = timeDiff.hours;
-  const daysDiff = timeDiff.days;
-  const minutesDiff = timeDiff.minutes;
-
-  console.log(daysDiff);
-  if (daysDiff >= 1) {
-    result.innerHTML = `Total: ${hoursDiff > 12 ? daysDiff + 1 : daysDiff}${
-      hoursDiff <= 12 ? " diárias e meia" : " diária(s)"
-    } `;
-  }
-}
