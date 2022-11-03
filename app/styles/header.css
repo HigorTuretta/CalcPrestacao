@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .header-area{
-    background-image: url('./airport.jpg');
+    background-image: url('/airport.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
