@@ -9,30 +9,40 @@
 </head>
 
 <body>
-  <section class="header-area">
-    <h1>Calculadora de Diárias</h1>
+  <section id="main-area">
+    <section class="header-area">
+      <h1>Calculadora de Diárias</h1>
+    </section>
+    <div class="dt-inputs-area">
+      <div class="form-group">
+        <label>Data/Hora Saída</label>
+        <div class="input-group">
+          <input type="date" name="dataIda" id="dataIda" class="inpt">
+          <input type="time" name="horaIda" id="horaIda" class="inpt">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Data/Hora Retorno</label>
+        <div class="input-group">
+          <input type="date" name="dataVolta" id="dataVolta" class="inpt">
+          <input type="time" name="horaVolta" id="horaVolta" class="inpt">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Valor da Diária</label>
+        <div class="input-group">
+          <input type="number" step="0.01" min="1" name="vlrDiaria" id="vlrDiaria" class="inpt">
+        </div>
+      </div>
+    </div>
+    <button class="btn-calc" id="calc">Calcular</button>
+
+    <div class="result-area">
+      <h1 class="result" id="total-diarias"></h1>
+      <h1 class="result" id="valor-total"></h1>
+    </div>
+    <script type="module" src="/main.js"></script>
   </section>
-  <div class="dt-inputs-area">
-    <div class="form-group">
-      <label>Data/Hora Saída</label>
-      <div class="input-group">
-        <input type="date" name="dataIda" id="dataIda" class="inpt">
-        <input type="time" name="horaIda" id="horaIda" class="inpt">
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Data/Hora Retorno</label>
-      <div class="input-group">
-        <input type="date" name="dataVolta" id="dataVolta" class="inpt">
-        <input type="time" name="horaVolta" id="horaVolta" class="inpt">
-      </div>
-    </div>
-  </div>
-  <button class="btn-calc" id="calc">Calcular</button>
-
-
-  <h1 class="result" id="result-area"></h1>
-  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 75%;
     margin-top: -90px;
     padding: 50px;
     border-radius: 50px;
@@ -17,11 +17,9 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    margin: 0 10px;
 }
 
-.form-group:first-of-type{
-    margin-right: 20px;
-}
 .form-group label{
     font-size: 24px;
     margin-bottom: 10px;
@@ -38,8 +36,12 @@
     border-radius: 50px;
     background: #ededed;
     box-shadow: #ababab -10px -10px 60px;
+    text-align: center;
+    width: 130px;
 }
-
+#vlrDiaria{
+    padding: 11px;
+}
 .inpt:hover{
     cursor: pointer;
 }
@@ -54,9 +56,15 @@
         flex-direction: column;
     }
 
+    .form-group{
+        margin: 0 0 10px 0;
+    }
     .form-group:first-of-type{
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-top: -20px;
+    }
+    .form-group label{
+        margin-bottom: 0;
     }
     .inpt{
         width: 80%;

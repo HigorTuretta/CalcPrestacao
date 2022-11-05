@@ -8,6 +8,7 @@ import {getCurrentDate, getFormattedTime, getFormattedDate } from "./app/utils/f
 import datetimeDifference from "datetime-difference";
 
 const btn = document.getElementById("calc");
+const vlrDiaria = document.getElementById('vlrDiaria');
 let dataIda = document.getElementById("dataIda");
 let horaIda = document.getElementById("horaIda");
 let dataVolta = document.getElementById("dataVolta");
@@ -18,7 +19,7 @@ window.onload = () => {
   horaIda.value = "21:00";
   dataVolta.value = getCurrentDate();
   horaVolta.value = "08:00";
-
+  vlrDiaria.value = 80;
   btn.addEventListener("click", getDates);
   btn.addEventListener("touchstart", getDates);
 };
