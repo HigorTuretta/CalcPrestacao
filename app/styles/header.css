@@ -37,7 +37,7 @@
     margin-top: -30px;
     animation: none;
     min-height: 25vh;
-    box-shadow: 0 5px #d3aa73;
+    box-shadow: 0 3px #d3aa73;
     z-index: 1;
   }
   .header-area h1 {
