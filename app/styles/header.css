@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .header-area {
-  background-image: url("/airport.jpg");
+  background-image: url("/a2e1045c22159eba4d0013254a6fc40f.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,6 +10,7 @@
   align-items: center;
   min-height: 300px;
   width: 100%;
+  animation: move-image 15s ease-in-out infinite alternate both;
 }
 
 .header-area h1 {
@@ -30,3 +31,14 @@
     font-size: 2.5rem;
   }
 }
+
+@keyframes 
+move-image{
+  0%{
+    background-position-y: -300px;
+  }
+  100%
+  {
+    background-position-y: -400px;
+    }
+  }
