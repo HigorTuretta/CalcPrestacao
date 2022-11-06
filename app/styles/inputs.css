@@ -1,73 +1,78 @@
-.dt-inputs-area{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    margin-top: -90px;
-    padding: 50px;
-    border-radius: 50px;
-    background-color: rgba(237, 237, 237, 0.9);
-    box-shadow: #909090 30px 30px 60px;
+.dt-inputs-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin-top: -90px;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: rgba(237, 237, 237, 0.9);
+  box-shadow: #909090 30px 30px 60px;
 }
 
-.form-group{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 10px;
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 10px;
 }
 
-.form-group label{
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-family: 'Bebas Neue', cursive;
-    text-align: center;
-    letter-spacing: 1px;
-    color: #131313;
+.form-group label {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #131313;
 }
 
-.inpt{
-    padding: 10px;
-    border: none;
-    margin:  2px;
-    border-radius: 50px;
-    background: #ededed;
-    box-shadow: #ababab -10px -10px 60px;
-    text-align: center;
-    width: 130px;
+.inpt {
+  padding: 10px;
+  border: none;
+  margin: 2px;
+  border-radius: 50px;
+  background: #ededed;
+  box-shadow: #ababab -10px -10px 60px;
+  text-align: center;
+  width: 130px;
 }
-#vlrDiaria{
-    padding: 11px;
+#vlrDiaria {
+  padding: 11px;
 }
-.inpt:hover{
-    cursor: pointer;
+.inpt:hover {
+  cursor: pointer;
 }
 
-.inpt:focus{
-    outline: none;
+.inpt:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 600px) {
-    .dt-inputs-area{
-        width: 70vw;
-        flex-direction: column;
-    }
+  .dt-inputs-area {
+    width: 65vw;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #633a5b;
+    box-shadow: none;
+  }
 
-    .form-group{
-        margin: 0 0 10px 0;
-    }
-    .form-group:first-of-type{
-        margin-right: 0;
-        margin-top: -20px;
-    }
-    .form-group label{
-        margin-bottom: 0;
-    }
-    .inpt{
-        width: 80%;
-        text-align: center;
-    }
+  .form-group {
+    margin: 0 0 10px 0;
+  }
+  .form-group:first-of-type {
+    margin-right: 0;
+    margin-top: -20px;
+  }
+  .form-group label {
+    margin-bottom: 0;
+    color: #ededed;
+  }
+  .inpt {
+    width: 80%;
+    text-align: center;
+    box-shadow: none;
+  }
 }

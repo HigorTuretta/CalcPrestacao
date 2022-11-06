@@ -23,4 +23,12 @@
 
 .btn-calc:focus {
   outline: none;
+  background-color: rgb(87, 180, 87);
+}
+
+@media screen and (max-width: 600px) {
+  .btn-calc {
+    background-color: #d3aa73;
+    color: #e3e3e3;
+  }
 }
