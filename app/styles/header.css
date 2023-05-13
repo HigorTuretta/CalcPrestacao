@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .header-area {
-  background-image: url("/a2e1045c22159eba4d0013254a6fc40f.png");
-  background-position: center;
+  background-image: url("/Background.jpg");
+  background-position: 0% 10%;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -37,7 +37,7 @@
     margin-top: -30px;
     animation: none;
     min-height: 25vh;
-    box-shadow: 0 3px #d3aa73;
+    box-shadow: 0 3px #016795;
     z-index: 1;
   }
   .header-area h1 {

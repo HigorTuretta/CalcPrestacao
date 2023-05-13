@@ -83,7 +83,7 @@ footer {
     color: #e3e3e3;
   }
   body {
-    background: #2b1b3e;
+    background: #1B2431;
   }
 }
 
@@ -192,6 +192,6 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .content_popUp {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
