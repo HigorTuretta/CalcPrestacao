@@ -2,6 +2,7 @@ import { scrollToBottom } from "./app/utils/autoScroll";
 
 export function calcResult(timeDiff) {  
   const hoursDiff = timeDiff.hours;
+  const minutesDiff = timeDiff.minutes
   const daysDiff = timeDiff.days;
   let diarias = 0;
   let meiaDiaria = false;
@@ -15,9 +16,16 @@ export function calcResult(timeDiff) {
       diarias = daysDiff;
     }
 
+    
     if (hoursDiff <= 12) {
+      
       // Se a diferença de horas for menor que 12 e também diferente de 0, teremos meia diária.
       if (hoursDiff != 0) {
+        meiaDiaria = true;
+      }
+
+      //Se a diferença de minutos for maior ou igual a 5 também teremos meia diária.
+      if (minutesDiff >= 5) {
         meiaDiaria = true;
       }
     }
