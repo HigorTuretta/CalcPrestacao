@@ -31,8 +31,8 @@ export function calcResult(timeDiff) {
     }
   } else {
     // Se não temos a diferença de dias, apenas conferimos se teremos uma diferença superior a 12 horas.
-    if (hoursDiff > 12) {
-      diarias = 1; // Acima de 12 horas = 1 diária.
+    if (hoursDiff > 12 || minutesDiff >= 5) {
+      diarias = 1; // Acima de 12 horas e 5 minutos = 1 diária.
     } else {
       meiaDiaria = true; // Caso negativo, meia diária.
     }
