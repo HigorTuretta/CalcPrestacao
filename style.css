@@ -13,6 +13,7 @@ body {
     rgba(189, 189, 189, 1) 35%,
     rgba(255, 255, 255, 1) 100%
   );
+  overflow-x: hidden;
 }
 
 #main-area {
