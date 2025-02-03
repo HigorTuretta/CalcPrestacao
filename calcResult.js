@@ -75,7 +75,7 @@ function geraMensagem(qtdDiarias, meia) {
       style: "currency",
       currency: "BRL",
     });
-    exibeValorDiarias.innerHTML = `Valor a gastar: <p>${vlrTotal}</p>`;
+    exibeValorDiarias.innerHTML = `<h1>${vlrTotal}</h1>`;
     addEntrance(exibeValorDiarias);
   }
   scrollToBottom();

@@ -4,15 +4,17 @@ import "./app/styles/inputs.css";
 import "./app/styles/buttons.css";
 
 import { calcResult } from "./calcResult";
-import {getCurrentDate, getFormattedTime, getFormattedDate } from "./app/utils/formatDates"
+import { getCurrentDate, getFormattedTime, getFormattedDate } from "./app/utils/formatDates";
 import datetimeDifference from "datetime-difference";
+// Se estiver usando o SweetAlert2 via NPM, descomente a linha abaixo:
+// import Swal from 'sweetalert2';
 
-const btn = document.getElementById("calc");
-const vlrDiaria = document.getElementById('vlrDiaria');
-let dataIda = document.getElementById("dataIda");
-let horaIda = document.getElementById("horaIda");
-let dataVolta = document.getElementById("dataVolta");
-let horaVolta = document.getElementById("horaVolta");
+const form = document.getElementById("calc-form");
+const vlrDiaria = document.getElementById("vlrDiaria");
+const dataIda = document.getElementById("dataIda");
+const horaIda = document.getElementById("horaIda");
+const dataVolta = document.getElementById("dataVolta");
+const horaVolta = document.getElementById("horaVolta");
 
 window.onload = () => {
   dataIda.value = getCurrentDate();
@@ -20,11 +22,11 @@ window.onload = () => {
   dataVolta.value = getCurrentDate();
   horaVolta.value = "08:00";
   vlrDiaria.value = 80;
-  btn.addEventListener("click", getDates);
-  btn.addEventListener("touchstart", getDates);
+  form.addEventListener("submit", getDates);
 };
 
-export function getDates() {
+export function getDates(event) {
+  event.preventDefault();
 
   const hora1 = getFormattedTime(new Date(`2022-01-01 ${horaIda.value}`));
   const hora2 = getFormattedTime(new Date(`2022-01-01 ${horaVolta.value}`));
@@ -35,54 +37,15 @@ export function getDates() {
   const dataHoraIda = new Date(date1 + " " + hora1);
   const dataHoraVolta = new Date(date2 + " " + hora2);
 
-
-// Exibe a mensagem de erro caso a data de retorno seja anterior a data de ida
-if (dataHoraVolta < dataHoraIda) {
-  showErrorPopup("A data de retorno não pode ser anterior a data de ida, gentileza verificar.");
-  return;
-}
+  // Se a data de retorno for anterior à data de ida, exibe alerta via SweetAlert2
+  if (dataHoraVolta < dataHoraIda) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Data Inválida',
+      text: 'A data de retorno não pode ser anterior à data de ida. Por favor, verifique.'
+    });
+    return;
+  }
 
   calcResult(datetimeDifference(dataHoraVolta, dataHoraIda));
-}
-
-function showErrorPopup(message) {
-  // Cria a div da popup
-  const popup = document.createElement("div");
-  popup.classList.add("popup_popUp");
-
-  // Cria o conteúdo da popup
-  const content = document.createElement("div");
-  content.classList.add("content_popUp");
-
-  const messageEl = document.createElement("div");
-  messageEl.classList.add("message_popUp");
-  messageEl.innerText = message;
-  content.appendChild(messageEl);
-
-  // Adiciona o conteúdo à popup
-  popup.appendChild(content);
-
-  // Cria o botão de fechar
-  const closeBtn = document.createElement("button");
-  closeBtn.classList.add("btn_popUp");
-  closeBtn.addEventListener("click", () => {
-    content.classList.add("hide_popUp");
-    setTimeout(() => {
-      document.body.removeChild(popup);
-    }, 300);
-  });
-
-  // Adiciona o botão ao conteúdo
-  content.appendChild(closeBtn);
-
-  // Adiciona a popup ao body
-  document.body.appendChild(popup);
-
-  // Adiciona a animação de entrada da popup
-  setTimeout(() => {
-    popup.classList.add("show_popUp");
-  }, 0);
-  setTimeout(() => {
-    content.classList.add("show_popUp");
-  }, 0);
 }

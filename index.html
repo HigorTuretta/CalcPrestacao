@@ -1,77 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Diárias</title>
+    <link rel="shortcut icon" href="/airplane.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="/airplane.png" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/5b242c111d.js" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de Diárias</title>
-</head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet" />
 
-<body>
-  <section id="main-area">
-    <section class="header-area">
-      <h1>Calculadora<br>de Diárias</h1>
-      <div class="newAppArea">
-          <h2>Gerencie suas despesas de viagem com facilidade</h3>
-          <a href="https://calky.app" target="_blank">Conheça o Calky!</a>
-      </div>
-    </section>
-    <div class="dt-inputs-area">
-      <div class="form-group">
-        <label>Data/Hora Saída</label>
-        <div class="input-group">
-          <input type="date" name="dataIda" id="dataIda" class="inpt">
-          <input type="time" name="horaIda" id="horaIda" class="inpt">
+    <!-- SweetAlert2 CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+
+    <!-- CSS personalizados -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="app/styles/header.css" />
+    <link rel="stylesheet" href="app/styles/inputs.css" />
+    <link rel="stylesheet" href="app/styles/buttons.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5b242c111d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main id="main-area">
+      <!-- Novo Header -->
+      <header class="site-header">
+        <div class="header-top">
+          <div class="logo">
+            <img src="/airplane.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">Calculadora de Diárias</span>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label>Data/Hora Retorno</label>
-        <div class="input-group">
-          <input type="date" name="dataVolta" id="dataVolta" class="inpt">
-          <input type="time" name="horaVolta" id="horaVolta" class="inpt">
+        <div class="header-hero">
+          <h1>Controle suas Notas com Facilidade</h1>
+          <p>Planeje, gerencie e economize em suas viagens.</p>
+          <div class="header-actions">
+            <a href="https://calky.netlify.app/" target="_blank" class="btn-calky">Conheça o Calky!</a>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label>Valor da Diária</label>
-        <div class="input-group">
-          <input type="number" step="0.01" min="1" name="vlrDiaria" id="vlrDiaria" class="inpt">
+      </header>
+
+      <!-- Área do formulário -->
+      <section class="calculator-area">
+        <form id="calc-form">
+          <div class="input-group">
+            <label for="dataIda">Data/Hora Saída</label>
+            <div class="datetime-group">
+              <input type="date" id="dataIda" required />
+              <input type="time" id="horaIda" required />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="dataVolta">Data/Hora Retorno</label>
+            <div class="datetime-group">
+              <input type="date" id="dataVolta" required />
+              <input type="time" id="horaVolta" required />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="vlrDiaria">Valor da Diária</label>
+            <input type="number" id="vlrDiaria" step="0.01" min="1" placeholder="Ex: 80.00" required />
+          </div>
+          <button type="submit" id="calc" class="btn-calc">Calcular</button>
+        </form>
+      </section>
+
+      <!-- Área de resultados -->
+      <section class="result-area">
+        <div class="result-item">
+          <h3>Total de Diárias</h3>
+          <p id="total-diarias"></p>
         </div>
-      </div>
-    </div>
-    <button class="btn-calc" id="calc">Calcular</button>
-
-    <div class="result-area">
-      <h1 class="result" id="total-diarias"></h1>
-      <h1 class="result" id="valor-total"></h1>
-    </div>
-
-
-
-<!--     <footer>
-      <div class="footer-top">
-        <div class="footer-content">
-          Made with pure <i class="fab fa-js"> </i> by <a target="_blank"
-            href="https://github.com/HigorTuretta/CalcPrestacao">Higor
-            Turetta</a>
+        <div class="result-item">
+          <h3>Valor Total</h3>
+          <p id="valor-total"></p>
         </div>
-      </div>
-    </footer> -->
+      </section>
+    </main>
 
-    <script type="module" src="/main.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNHK57DD40"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-MNHK57DD40');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9784301463878946"
-     crossorigin="anonymous"></script>
-  </section>
-</body>
+    <!-- SweetAlert2 JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Script principal -->
+    <script type="module" src="main.js"></script>
+
+    <!-- Google Analytics / Ads (se necessário) -->
+  </body>
 </html>
