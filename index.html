@@ -22,61 +22,73 @@
     <script src="https://kit.fontawesome.com/5b242c111d.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <main id="main-area">
-      <!-- Novo Header -->
-      <header class="site-header">
-        <div class="header-top">
-          <div class="logo">
-            <img src="/airplane.png" alt="Logo" class="logo-img" />
-            <span class="logo-text">Calculadora de Diárias</span>
-          </div>
-        </div>
-        <div class="header-hero">
-          <h1>Controle suas Notas com Facilidade</h1>
-          <p>Planeje, gerencie e economize em suas viagens.</p>
-          <div class="header-actions">
-            <a href="https://calky.netlify.app/" target="_blank" class="btn-calky">Conheça o Calky!</a>
-          </div>
-        </div>
-      </header>
-
-      <!-- Área do formulário -->
-      <section class="calculator-area">
-        <form id="calc-form">
-          <div class="input-group">
-            <label for="dataIda">Data/Hora Saída</label>
-            <div class="datetime-group">
-              <input type="date" id="dataIda" required />
-              <input type="time" id="horaIda" required />
+    <section class="container">
+      <main id="main-area">
+        <!-- Novo Header -->
+        <header class="site-header">
+          <div class="header-top">
+            <div class="logo">
+              <img src="/airplane.png" alt="Logo" class="logo-img" />
+              <span class="logo-text">Calculadora de Diárias</span>
             </div>
           </div>
-          <div class="input-group">
-            <label for="dataVolta">Data/Hora Retorno</label>
-            <div class="datetime-group">
-              <input type="date" id="dataVolta" required />
-              <input type="time" id="horaVolta" required />
+          <div class="header-hero">
+            <h3>Controle suas Notas com Facilidade</h3>
+            <p>Planeje, gerencie e economize em suas viagens.</p>
+            <div class="header-actions">
+              <a href="https://calky.netlify.app/" target="_blank" class="btn-calky">Conheça o Calky!</a>
             </div>
           </div>
-          <div class="input-group">
-            <label for="vlrDiaria">Valor da Diária</label>
-            <input type="number" id="vlrDiaria" step="0.01" min="1" placeholder="Ex: 80.00" required />
-          </div>
-          <button type="submit" id="calc" class="btn-calc">Calcular</button>
-        </form>
-      </section>
+        </header>
 
-      <!-- Área de resultados -->
-      <section class="result-area">
-        <div class="result-item">
-          <h3>Total de Diárias</h3>
-          <p id="total-diarias"></p>
-        </div>
-        <div class="result-item">
-          <h3>Valor Total</h3>
-          <p id="valor-total"></p>
-        </div>
-      </section>
-    </main>
+        <!-- Área do formulário -->
+        <section class="calculator-area">
+          <form id="calc-form">
+            <div class="input-group">
+              <label for="dataIda">Data/Hora Saída</label>
+              <div class="datetime-group">
+                <input type="date" id="dataIda" required />
+                <input type="time" id="horaIda" required />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="dataVolta">Data/Hora Retorno</label>
+              <div class="datetime-group">
+                <input type="date" id="dataVolta" required />
+                <input type="time" id="horaVolta" required />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="vlrDiaria">Valor da Diária</label>
+              <input type="number" id="vlrDiaria" step="0.01" min="1" placeholder="Ex: 80.00" required />
+            </div>
+            <button type="submit" id="calc" class="btn-calc">Calcular</button>
+          </form>
+        </section>
+
+        <!-- Área de resultados -->
+        <section class="result-area">
+          <div class="result-item">
+            <h3>Total de Diárias</h3>
+            <p id="total-diarias"></p>
+          </div>
+          <div class="result-item">
+            <h3>Valor Total</h3>
+            <p id="valor-total"></p>
+          </div>
+        </section>
+      </main>
+    </section>
+    <footer>
+      <div class="links-area">
+        <a href="./app/pages/aboutCalky.html">Sobre o Calky</a>
+        <a href="./app/pages/contact.html">Contato</a>
+      </div>
+      <div class="links-area">
+        <a href="./app/pages/privacy.html">Política de Privacidade</a>
+        <a href="./app/pages/terms.html">Termos de Serviço</a>
+      </div>
+    </footer>
 
     <!-- SweetAlert2 JS via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
