@@ -20,11 +20,19 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5b242c111d.js" crossorigin="anonymous"></script>
+
+    <!-- Código do AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-5320335487867889" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5320335487867889"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="container">
       <main id="main-area">
-        <!-- Novo Header -->
+        <!-- Cabeçalho -->
         <header class="site-header">
           <div class="header-top">
             <div class="logo">
@@ -36,12 +44,12 @@
             <h3>Controle suas Notas com Facilidade</h3>
             <p>Planeje, gerencie e economize em suas viagens.</p>
             <div class="header-actions">
-              <a href="https://calky.netlify.app/" target="_blank" class="btn-calky">Conheça o Calky!</a>
+              <a href="https://calky.netlify.app/" target="_blank" class="btn-calky"> Conheça o Calky! </a>
             </div>
           </div>
         </header>
 
-        <!-- Área do formulário -->
+        <!-- Área do formulário da calculadora -->
         <section class="calculator-area">
           <form id="calc-form">
             <div class="input-group">
@@ -77,8 +85,33 @@
             <p id="valor-total"></p>
           </div>
         </section>
+
+        <!-- Seção "Sobre o Calky" e benefícios para usar a solução completa -->
+        <section class="about-calky" style="padding: 1rem; background: #f8f8f8; margin: 1rem 0; border-radius: 8px">
+          <!-- Chamada de diferenciação para mobile -->
+          <div style="background: #e0f7fa; padding: 0.5rem; border-radius: 5px; margin-bottom: 1rem">
+            <strong>Quer mais do que uma simples calculadora?</strong>
+            Descubra como o
+            <a href="https://calky.netlify.app/" target="_blank" style="color: #007aff; text-decoration: underline">Calky</a>
+            oferece um controle completo de suas diárias!
+          </div>
+          <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem">Sobre o Calky</h1>
+          <p>
+            <strong>Calky</strong> é uma aplicação web intuitiva projetada para simplificar o gerenciamento de despesas de viagens
+            a trabalho. É a ferramenta ideal para profissionais que precisam acompanhar suas diárias de alimentação e monitorar
+            gastos através do registro de recibos.
+          </p>
+
+          <p style="margin-top: 1rem">
+            Conheça mais detalhes e comece a usar o
+            <a href="https://calky.netlify.app/" target="_blank" style="color: #007aff; text-decoration: underline"> Calky </a>
+            para simplificar a gestão de suas viagens profissionais.
+          </p>
+        </section>
       </main>
     </section>
+
+    <!-- Rodapé -->
     <footer>
       <div class="links-area">
         <a href="./app/pages/aboutCalky.html">Sobre o Calky</a>
@@ -95,12 +128,5 @@
 
     <!-- Script principal -->
     <script type="module" src="main.js"></script>
-
-    <!-- Google Analytics / Ads (se necessário) -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5320335487867889"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
